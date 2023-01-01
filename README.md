@@ -12,6 +12,24 @@
 
 ---
 
+### 환경 설정
+
+* Tomcat 9.0.68
+* MySQL 8.0.30
+* JDK 17.0.5
+
+
+#### Tomcat
+
+* Tomcat은 HTTP 연결 Port로 8080, Shutdown Port로 8005번을 이용합니다.
+
+* 역할과 사용자 구성
+> Tomcat 서버에 역할과 사용자를 구성하려면 Servers의  tomcat-users.xml을 수정해야 합니다.
+
+---
+
+## View
+
 ### 로그인
 
 ![image](https://user-images.githubusercontent.com/80390524/210159962-814e040d-6ca8-4f1a-a37d-744c22765dcd.png)
