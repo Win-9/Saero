@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+  <display-name>WebProject</display-name>
+  
+  <security-role>
+  	<role-name>guest</role-name>
+  </security-role>
+  
+  <security-constraint>
+  	<web-resource-collection>
+  		<web-resource-name>WebProject</web-resource-name>
+  		<url-pattern>/web/index.jsp</url-pattern>
+  		<url-pattern>/web/animalInfo.jsp</url-pattern>
+  		<url-pattern>/web/register.jsp</url-pattern>
+  		<url-pattern>/web/myInfo.jsp</url-pattern>
+  		<url-pattern>/web/service.jsp</url-pattern>  		
+  	</web-resource-collection>
+  	<auth-constraint>
+  		<description></description>
+  		<role-name>guest</role-name>
+  	</auth-constraint>
+  </security-constraint>
+  
+  <login-config>
+  	<auth-method>FORM</auth-method>
+  	<form-login-config>
+  		<form-login-page>/web/login.jsp</form-login-page>
+  		<form-error-page>/web/login_failed.jsp</form-error-page>
+  	</form-login-config>
+  </login-config>
+  
+  
+  <error-page>
+  	<error-code>400</error-code>
+  	<location>/web/errorPage.jsp</location>
+  </error-page>
+  
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/web/errorPage.jsp</location>
+  </error-page>
+  
+  <error-page>
+  <error-code>500</error-code>
+  	<location>/web/errorPage.jsp</location>
+  </error-page>
+</web-app>
